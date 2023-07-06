@@ -6,7 +6,7 @@ import React, { useEffect } from "react";
 import { domain } from "../../domain";
 
 export async function getServerSideProps(context: any) {
-  const data = await fetchMeta(domain + "/doc-bao/" + context.params.slug);
+  const data = await fetchMeta(domain + "/" + context.params.slug);
   return {
     props: data,
   };
